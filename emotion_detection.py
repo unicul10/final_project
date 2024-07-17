@@ -9,4 +9,15 @@ def emotion_detector(text_to_analyze):
 
     formatted_response = json.loads(response.text)
 
-    return (formatted_response)
+    emotion_predictions = formatted_response.get('emotionPredictions', [])
+    if emotion_predictions:
+        emotions = emotion_predictions[0].get('emotion', {})
+        dominant_emotion = max(emotions, key=emotions.get)
+            
+        formatted_emotion = {**emotions, 'dominant_emotion': dominant_emotion}
+        return formatted_emotion
+    else:
+        print("No emotion predictions found in the response.")
+        return None
+
+    return (formatted_emotion)
