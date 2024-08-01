@@ -7,8 +7,8 @@ Author(Learner): [Subhajit098]
 """
 
 from flask import Flask, render_template, request
-from EmotionDetection.emotion_detection import emotion_detector
-from EmotionDetection.emotion_detection import emotion_predictor
+from emotionDetection.emotion_detection import emotion_detector
+from emotionDetection.emotion_detection import emotion_predictor
 
 app = Flask("Emotion Detection")
 
