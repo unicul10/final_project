@@ -16,3 +16,13 @@ def emotion_detector(text_to_analyse):  # Define a function named emotion_detect
     
     # Returning a dictionary containing emotion analysis results
     return response.text  # Return the response text from the API
+
+"""
+To test this file, on the CLI run:
+python 3.11
+import json
+from emotion_detection import emotion_detector
+response = emotion_detector("I love working with this product")
+formatted_response = json.loads(response)
+print(formatted_response)
+"""
