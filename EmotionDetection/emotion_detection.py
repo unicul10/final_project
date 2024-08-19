@@ -53,7 +53,6 @@ def emotion_detector(text_to_analyse):  # Define a function named emotion_detect
         'dominant_emotion': dominant_emotion
         }
 
-
 """
 To test this file, on the CLI run:
 python 3.11
