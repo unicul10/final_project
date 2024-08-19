@@ -29,7 +29,7 @@ def sent_analyzer():
         return "Invalid text! Please try again!"
 
     # Return a formatted string with the sentiment label and score
-    return f"For the given statement, the system response is {response}. The dominant emotion is {dominant_emotion}"
+    return f"The emotions detected are {response}. The dominant emotion is {dominant_emotion}"
 
 @app.route("/")
 def render_index_page():
@@ -39,6 +39,4 @@ def render_index_page():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    '''This block executes the flask app and deploys it on localhost:5000'''
     app.run(host="0.0.0.0", port=5000)
-
