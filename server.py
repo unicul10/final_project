@@ -24,6 +24,9 @@ def sent_analyzer():
 
     # Extract the dominant emotion and score from the response
     dominant_emotion = response.get('dominant_emotion', 'UNKNOWN')
+    if dominant_emotion is None:
+        # Return a specific message if dominant_emotion is None
+        return "Invalid text! Please try again!"
 
     # Return a formatted string with the sentiment label and score
     return f"For the given statement, the system response is {response}. The dominant emotion is {dominant_emotion}"
